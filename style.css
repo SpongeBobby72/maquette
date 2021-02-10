@@ -4,8 +4,21 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    background-image: url("maquettes/fonds-ecran-hd_05.jpg");
     background-size: cover;
+    background: linear-gradient(-45deg, #ffffff, #a7d5ef, #e9d9c2, #f3d578);
+    background-size: 400%, 400%;
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 main {
     background-size: cover;
@@ -51,14 +64,15 @@ header a {
 }
 #login {
     background:#2d313c;
-    padding:20px;
+    padding:40px;
     display:none;
     z-index:10001;
     position:fixed;
     top:20%;
     left:20%;
-    height:50%;
+    height:60%;
     width:60%;
+    border-radius: 10px;
 }
 #login input {
     width: 80%;
@@ -68,11 +82,10 @@ header a {
     position: relative;
     float: right;
     margin: -230px 2% 0 0;
-    padding: 15px;
+    padding: 10px;
     border-radius: 50%;
     font-weight: bolder;
 }
-
 .sub-header {
     text-align: center;
 
@@ -190,6 +203,12 @@ header a {
 .grey-section .container h2 {
     color: white;
 }
+.white_section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #ffffff;
+    overflow: hidden;
+}
 
 /*Smartphone*/
 @media screen and (max-width: 599px) {
@@ -206,35 +225,39 @@ header a {
         min-width: 100%;
         min-height: 100%;
     }
-
     .collumn {
         width: 50%;
         float: left;
     }
-
     .collumn1 {
         padding-right: 30px;
         margin-top: 30px;
     }
-
     .présentation-details {
         margin-left: 0;
     }
-
     .small-collumn {
         width: 50%;
         float: left;
     }
-
     .card-collumn {
         height: 420px;
     }
-
     #login {
         top: 25%;
         left: 20%;
-        height: 50%;
+        height: 40%;
         width: 60%;
+    }
+    #login input {
+        width: 40%;
+        float: right;
+        margin-right: 20%;
+    }
+    #login a {
+        display: block;
+        float: right;
+        margin-right: 20%;
     }
 }
 
@@ -252,5 +275,16 @@ header a {
     }
     .card-collumn{
         height: 350px;
+    }
+    #login input {
+        width: 40%;
+        float: right;
+        margin-right: 20%;
+        /*text-align: center;*/
+    }
+    #login a {
+        display: block;
+        float: right;
+        margin-right: 20%;
     }
 }

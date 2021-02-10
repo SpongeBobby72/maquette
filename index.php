@@ -28,16 +28,16 @@
 <!--        <a class="id" href="#"><img src="maquettes/id.svg" alt="id"></a>-->
         <button class="connexion" type="button" onclick="$('#login').fadeIn();">Id</button>
         <div id="login">
-            <form action="" method="post">
-                <label id="identifiant" for="name">Identifiant</label>
+            <form action="traitement.php" method="post">
+                <label id="identifiant" for="name">Identifiant:</label>
                 <input type="text" id="name" name="name">
                 <br><br>
-                <label for="password">Mot de passe</label>
+                <label for="password">Mot de passe:</label>
                 <input type="password" id="password" name="password">
-                <br>
+                <br><br>
                 <a href="#">Mot de passe oublié</a>
                 <br><br>
-                <input type="submit" value="connection">
+                <input type="submit" value="connection" style="width: 150px; text-align: center">
             </form>
             <br/><br/>
             <button type="button" onclick="$('#login').fadeOut();">Fermer</button>
@@ -128,6 +128,14 @@
             </div>
         </div>
     </div>
+
+<!--    Partage de projets-->
+    <div class="white_section">
+        <div class="container">
+            <h2>Projets</h2>
+        </div>
+    </div>
+
 </main>
 </body>
 </html>
